@@ -17,6 +17,9 @@ class SecretViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         PrepareTexts()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         ShowTextAnimation()
     }
     private func PrepareTexts() {
@@ -31,18 +34,16 @@ class SecretViewController: UIViewController {
     }
     
     private func ShowTextAnimation() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let animation = InorderAnimation()
-            for view in self.TextList.subviews {
-                animation.AddAnimation(animation: ExecuteAnimation(Duration: 0.75, Delay: 0, Options: .curveLinear, WhenComplete: nil, DoAnimation: {
-                    view.alpha = 1.0
-                }))
-            }
-            animation.AddAnimation(animation:ExecuteAnimation(Duration: 0.75, Delay: 0, Options: .curveLinear, WhenComplete: nil, DoAnimation: {
-                self.BackgroundImage.alpha = 0.3
-                self.BackgroundImage.transform = self.BackgroundImage.transform.translatedBy(x: 0, y: -20)
+        let animation = InorderAnimation()
+        for view in self.TextList.subviews {
+            animation.AddAnimation(animation: ExecuteAnimation(Duration: 0.75, Delay: 0, Options: .curveLinear, WhenComplete: nil, DoAnimation: {
+                view.alpha = 1.0
             }))
-            animation.Begin()
         }
+        animation.AddAnimation(animation:ExecuteAnimation(Duration: 0.75, Delay: 0, Options: .curveLinear, WhenComplete: nil, DoAnimation: {
+            self.BackgroundImage.alpha = 0.3
+            self.BackgroundImage.transform = self.BackgroundImage.transform.translatedBy(x: 0, y: -20)
+        }))
+        animation.Begin()
     }
 }

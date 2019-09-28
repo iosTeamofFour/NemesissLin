@@ -32,7 +32,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PrepareAnimation()
         UserName.delegate = self
         Password.delegate = self
         TextFieldAndLabelBinding[UserName] = UserNameLabel
@@ -46,6 +45,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.KeyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.KeyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        StartShowInputAreaAnimation()
     }
     
     deinit {
@@ -101,7 +104,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         SetFocusTextFieldBored(tf: textField)
-        ChangeButtonTextAnimation(toText: "登陆")
         return true
     }
     
@@ -121,6 +123,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             ChangeButtonTextAnimation(toText: "密码错误")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                self.ChangeButtonTextAnimation(toText: "登陆")
+            })
         }
     }
     
@@ -159,16 +164,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.LoginButton.alpha = 1
         }))
         animation.Begin()
-    }
-    
-    private func PrepareAnimation() {
-//        self.performSelector(inBackground: #selector(BeginAnimation), with: self)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01, execute:StartShowInputAreaAnimation)
-    }
-    
-    @objc private func BeginAnimation() {
-//        usleep(useconds_t(0.001 * 1000000))
-        self.performSelector(onMainThread: #selector(StartShowInputAreaAnimation), with: self, waitUntilDone: true)
     }
     
     @objc private func StartShowInputAreaAnimation() {
