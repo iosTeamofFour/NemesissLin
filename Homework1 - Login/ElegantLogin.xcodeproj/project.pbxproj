@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40FBB1323559C6500508030 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FBB1223559C6500508030 /* MealTableViewController.swift */; };
+		A40FBB1623559D1300508030 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FBB1523559D1300508030 /* Meal.swift */; };
+		A40FBB1923559F4400508030 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FBB1823559F4400508030 /* MealTableViewCell.swift */; };
+		A40FBB1B2355A53800508030 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FBB1A2355A53800508030 /* MealDetailViewController.swift */; };
+		A4203DAA234C61BE008C3632 /* Index.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45C680B234C60D90045D712 /* Index.storyboard */; };
+		A4203DAC234C6DD0008C3632 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4203DAB234C6DD0008C3632 /* SecondViewController.swift */; };
+		A4203DAE234C70A9008C3632 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4203DAD234C70A9008C3632 /* FirstViewController.swift */; };
 		A45E029B233A5CF900A62609 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E029A233A5CF900A62609 /* AppDelegate.swift */; };
 		A45E029D233A5CF900A62609 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45E029C233A5CF900A62609 /* WelcomeViewController.swift */; };
 		A45E02A0233A5CF900A62609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A45E029E233A5CF900A62609 /* Main.storyboard */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A40FBB1223559C6500508030 /* MealTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		A40FBB1523559D1300508030 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		A40FBB1823559F4400508030 /* MealTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		A40FBB1A2355A53800508030 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		A4203DAB234C6DD0008C3632 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A4203DAD234C70A9008C3632 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A45C680B234C60D90045D712 /* Index.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Index.storyboard; sourceTree = "<group>"; };
 		A45E0297233A5CF900A62609 /* ElegantLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElegantLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A45E029A233A5CF900A62609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A45E029C233A5CF900A62609 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +57,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A40FBB1423559D0700508030 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A40FBB1523559D1300508030 /* Meal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A40FBB1723559F3200508030 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A40FBB1823559F4400508030 /* MealTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A45C680D234C610D0045D712 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A45E029E233A5CF900A62609 /* Main.storyboard */,
+				A45E02A3233A5CF900A62609 /* LaunchScreen.storyboard */,
+				A45C680B234C60D90045D712 /* Index.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		A45E028E233A5CF900A62609 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +102,12 @@
 		A45E0299233A5CF900A62609 /* ElegantLogin */ = {
 			isa = PBXGroup;
 			children = (
+				A40FBB1723559F3200508030 /* Views */,
+				A40FBB1423559D0700508030 /* Model */,
+				A45C680D234C610D0045D712 /* Storyboards */,
 				A4DD2C78233F10C500DC102B /* ViewControllers */,
 				A45E029A233A5CF900A62609 /* AppDelegate.swift */,
-				A45E029E233A5CF900A62609 /* Main.storyboard */,
 				A45E02A1233A5CF900A62609 /* Assets.xcassets */,
-				A45E02A3233A5CF900A62609 /* LaunchScreen.storyboard */,
 				A45E02A6233A5CF900A62609 /* Info.plist */,
 				A45E02B2233B11C500A62609 /* UIUtils.swift */,
 				A4DD2C76233F04F400DC102B /* InorderAnimation.swift */,
@@ -80,6 +121,10 @@
 				A45E029C233A5CF900A62609 /* WelcomeViewController.swift */,
 				A45E02B0233A8E6800A62609 /* LoginViewController.swift */,
 				A4DD2C79233F110000DC102B /* SecretViewController.swift */,
+				A4203DAB234C6DD0008C3632 /* SecondViewController.swift */,
+				A4203DAD234C70A9008C3632 /* FirstViewController.swift */,
+				A40FBB1223559C6500508030 /* MealTableViewController.swift */,
+				A40FBB1A2355A53800508030 /* MealDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -146,6 +191,7 @@
 				A45E02A5233A5CF900A62609 /* LaunchScreen.storyboard in Resources */,
 				A45E02A2233A5CF900A62609 /* Assets.xcassets in Resources */,
 				A45E02A0233A5CF900A62609 /* Main.storyboard in Resources */,
+				A4203DAA234C61BE008C3632 /* Index.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,11 +202,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A40FBB1623559D1300508030 /* Meal.swift in Sources */,
+				A40FBB1923559F4400508030 /* MealTableViewCell.swift in Sources */,
+				A40FBB1B2355A53800508030 /* MealDetailViewController.swift in Sources */,
 				A45E02B1233A8E6800A62609 /* LoginViewController.swift in Sources */,
 				A45E029D233A5CF900A62609 /* WelcomeViewController.swift in Sources */,
 				A4DD2C7A233F110000DC102B /* SecretViewController.swift in Sources */,
+				A4203DAE234C70A9008C3632 /* FirstViewController.swift in Sources */,
 				A45E029B233A5CF900A62609 /* AppDelegate.swift in Sources */,
+				A4203DAC234C6DD0008C3632 /* SecondViewController.swift in Sources */,
 				A4DD2C77233F04F400DC102B /* InorderAnimation.swift in Sources */,
+				A40FBB1323559C6500508030 /* MealTableViewController.swift in Sources */,
 				A45E02B3233B11C500A62609 /* UIUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
